@@ -66,7 +66,7 @@ def make_access_token():
         try:
             f = opener.open(request)
             print f.headers.headers
-            return_callback_url = f.geturl
+            return_callback_url = f.geturl()
             # print f.read()
         except urllib2.HTTPError, e:
             return_callback_url = e.geturl()
